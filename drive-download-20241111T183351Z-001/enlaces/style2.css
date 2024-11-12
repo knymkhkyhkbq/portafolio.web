@@ -1,0 +1,293 @@
+/* Estilo básico para enlaces */
+a {
+    color: #3498db; /* Color azul */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease; /* Transición suave */
+}
+
+/* Efecto hover (al pasar el cursor) */
+a:hover {
+    color: #000000; /* Cambia a un tono de azul más oscuro */
+    transform: scale(1.05); /* Ligero aumento de tamaño */
+}
+
+/* Enlaces dentro de un contenedor oscuro */
+.dark-theme a {
+    color: #ffffff; /* Color blanco para temas oscuros */
+}
+
+.dark-theme a:hover {
+    color: #f39c12; /* Cambia a un tono amarillo/anaranjado */
+}
+
+/* Enlaces visitados */
+a:visited {
+    color: #000000; /* Cambia el color si ya fue visitado */
+}
+
+/* Enlaces activos (al hacer clic) */
+a:active {
+    color: #2c3e50; /* Cambia a un tono oscuro temporalmente */
+    transform: scale(0.95); /* Ligero encogimiento al hacer clic */
+}
+a{
+    color: rgb(15, 25, 170);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 4px 3px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background-color: rgb(18, 108, 225);
+    animation-duration: 3s;
+    animation-name: aparecer;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+a:hover{
+    transform: scale(1.1);
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+    border-radius: 20px;
+    border: 1px solid rgb(237, 0, 0);
+    background-color: rgb(255, 255, 255);
+}
+
+
+/* Estilos generales para el cuerpo */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Color de fondo */
+}
+
+/* Estilos de la barra de navegación */
+nav {
+    background-color: #333; /* Color de fondo de la navbar */
+    color: #ffffff; /* Color del texto */
+    display: flex; /* Usamos flexbox para alinear los elementos */
+    justify-content: space-between; /* Espaciado entre los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    padding: 15px 20px; /* Espaciado interno */
+}
+
+/* Estilo del logo */
+.logo h1 {
+    font-size: 1.8rem; /* Tamaño de la fuente del logo */
+    margin: 0; /* Sin márgenes */
+}
+
+/* Estilo del menú */
+.menu {
+    list-style: none; /* Sin viñetas */
+    display: flex; /* Usamos flexbox para el menú */
+    margin: 0; /* Sin márgenes */
+    padding: 0; /* Sin espaciado */
+}
+
+/* Estilo de los elementos del menú */
+.menu li {
+    margin-left: 20px; /* Espaciado entre elementos del menú */
+}
+
+/* Estilo de los enlaces del menú */
+.menu a {
+    text-decoration: none; /* Sin subrayado */
+    color: #000000; /* Color del texto */
+    font-size: 1rem; /* Tamaño de la fuente */
+    transition: color 0.3s ease; /* Efecto de transición para hover */
+}
+
+/* Efecto hover en los enlaces del menú */
+.menu a:hover {
+    color: #000000; /* Cambia el color al pasar el mouse */
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        display: none; /* Inicialmente oculta el menú */
+        width: 100%; /* Ancho completo */
+        background-color: #333; /* Color de fondo */
+        position: absolute; /* Posición absoluta para superponerse */
+        top: 60px; /* Distancia desde la parte superior */
+        left: 0; /* Alinear a la izquierda */
+    }
+
+    nav .menu.active {
+        display: flex; /* Muestra el menú si tiene la clase 'active' */
+    }
+
+    .menu li {
+        margin-left: 0; /* Sin espaciado en columnas */
+        padding: 10px; /* Espaciado en los elementos */
+    }
+}
+
+/* Estilo para el botón de menú en móviles */
+.menu-toggle {
+    display: none; /* Oculto por defecto */
+    font-size: 1.5rem; /* Tamaño de la fuente */
+    cursor: pointer; /* Cambia el cursor a puntero */
+}
+
+/* Mostrar botón de menú en dispositivos móviles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Mostrar en pantallas pequeñas */
+    }
+}
+
+
+
+h2{
+    color: #000000;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    animation-duration: 3s;
+    animation-name: aparecer;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: paused;
+
+    @keyframes aparecer {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
+h2:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    border-radius: 100px;
+    border: 3px solid rgb(7, 56, 255);
+    background-color: rgb(18, 144, 206);
+}
+
+footer {
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 10px 0;
+    font-family: Arial, sans-serif;
+}
+
+footer .social-media {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+footer .social-media li {
+    display: inline-block;
+}
+
+footer .social-media a {
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+footer .social-media a:hover {
+    color: #ff6600; /* Cambia este color según tu preferencia */
+}
+
+/* Estilos generales para el elemento <main> */
+main {
+    max-width: 1200px; /* Anchura máxima para que el contenido no se extienda demasiado */
+    margin: 0 auto; /* Centrar el contenido horizontalmente */
+    padding: 20px; /* Espacio interno alrededor del contenido */
+    background-color: #f9f9f9; /* Color de fondo suave */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera para resaltar el <main> */
+    font-family: Arial, sans-serif; /* Fuente estándar */
+}
+
+/* Estilos para los elementos de encabezado dentro de <main> */
+main h2, main h3 {
+    color: #333; /* Color de texto oscuro */
+    margin-bottom: 10px; /* Espacio debajo del título */
+}
+
+main p {
+    line-height: 1.6; /* Espaciado entre líneas para facilitar la lectura */
+    color: #555; /* Color de texto gris para contraste suave */
+    margin-bottom: 15px; /* Espacio debajo de cada párrafo */
+}
+
+/* Estilo para los botones dentro de <main> */
+main .cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Color de fondo del botón */
+    color: #fff; /* Color de texto blanco */
+    text-decoration: none; /* Quitar subrayado */
+    border-radius: 4px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Transición suave para hover */
+}
+
+main .cta-button:hover {
+    background-color: #0056b3; /* Color de fondo del botón al pasar el ratón */
+}
+
+h4{
+    color: #340f9c;
+
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+.pantalla-pequeña .container {
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+/* Estilos para pantallas medianas (tablets) */
+.pantalla-mediana .container {
+    padding: 20px;
+    font-size: 1rem;
+}
+
+/* Estilos para pantallas grandes (escritorio) */
+.pantalla-grande .container {
+    padding: 30px;
+    font-size: 1.1rem;
+}
+
+
+/* Estilos generales */
+body {
+    font-size: 16px;
+}
+
+/* Para pantallas más pequeñas */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px; /* Reduce el tamaño de la fuente */
+    }
+}
+
+/* Para pantallas más grandes */
+@media (min-width: 601px) {
+    body {
+        font-size: 18px; /* Aumenta el tamaño de la fuente */
+    }
+}
