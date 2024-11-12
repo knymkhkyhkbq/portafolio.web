@@ -1,0 +1,197 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo y fuente general */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 800px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+/* Título principal */
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+/* Párrafos */
+p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Sección de Habilidades */
+.skills h2 {
+    color: #2c3e50;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills ul li {
+    background-color: #e9f5fb;
+    color: #2c3e50;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+/* Iconos decorativos en cada habilidad */
+.skills ul li::before {
+    content: "✓";
+    color: #3498db;
+    margin-right: 10px;
+}
+
+/* Sección de Contacto */
+.contact h2 {
+    color: #273a4d;
+    font-size: 1.5em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.contact a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Lista de enlaces a redes sociales */
+.contact ul {
+    list-style-type: none;
+    padding: 10px;
+}
+
+.contact ul li {
+    margin: 5px 0;
+}
+
+/* Enlaces de redes sociales */
+.contact ul li a {
+    color: #2c3e50;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact ul li a:hover {
+    color: #3498db;
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+
+    p, .skills ul li {
+        font-size: 1em;
+    }
+
+    .skills h2, .contact h2 {
+        font-size: 1.3em;
+    }
+}
+
+
+button{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 4px 3px;
+    border: 10px solid rgb(255, 255, 255);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background-color: rgb(255, 255, 255);
+    animation-duration: 3s;
+    animation-name: aparecer;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+button:hover{
+    background-color: rgb(0, 0, 0);
+    color: rgb(30, 30, 77);
+    border: 1px solid rgb(30, 30, 77);
+}
+
+span{
+
+    animation-duration: 3s;
+    animation-name: aparecer;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* Estilos generales */
+body {
+    font-size: 16px;
+}
+
+/* Para pantallas más pequeñas */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px; /* Reduce el tamaño de la fuente */
+    }
+}
+
+/* Para pantallas más grandes */
+@media (min-width: 601px) {
+    body {
+        font-size: 18px; /* Aumenta el tamaño de la fuente */
+    }
+}
